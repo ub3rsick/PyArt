@@ -20,6 +20,10 @@ class Victor:
                   "#FFFB00", "#EC00BD", "#AE2DCE", "#CAFC00", "#DDD2C2"]
 
     def __init__(self):
+        # Screen setup
+        self.window = turtle.Screen()
+        self.window.setup(800, 800)
+        # Pen setup
         self.pen = turtle.Turtle()
         self.pen.speed(0)
         self.pen.hideturtle()
@@ -48,19 +52,18 @@ class Victor:
         self.pen.end_fill()
 
     def clear_canvas(self):
-        self.pen.clear()
+        #self.pen.clear()
+        self.window.clear()
 
-    @staticmethod
-    def save_img():
-        sc = turtle.Screen()
-        sc.getcanvas().postscript(file="img - %s.eps" % time.time())
+    def save_img(self):
+        self.window.getcanvas().postscript(file="img - %s.eps" % time.time())
 
 
 if __name__ == "__main__":
     x, y = -300, 300
 
     # change grid size and square size as required
-    grid_size = 5
+    grid_size = 10
     square_size = move_dist = 60
     small_square = int(square_size / 2)
     ob = Victor()
@@ -81,6 +84,5 @@ if __name__ == "__main__":
             radii = randint(2, int(square_size / 3))
             ob.draw_circle(radii, (x + int(square_size / 2) * (2 * i + 1),
                                    y - int(square_size / 2) * (2 * z + 1) - radii))
-
 
     ob.save_img()
