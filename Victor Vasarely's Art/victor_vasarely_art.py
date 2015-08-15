@@ -17,7 +17,14 @@ class Victor:
                   "#CFFF04", "#270436", "#FF2253", "#FF521B", "#FF006F",
                   "#00A8A0", "#1DCF7C", "#49FF30", "#81FF26", "#BEFF30",
                   "#FF0586", "#F76336", "#F7C736", "#36A4F7", "#55C728",
-                  "#FFFB00", "#EC00BD", "#AE2DCE", "#CAFC00", "#DDD2C2"]
+                  "#FFFB00", "#EC00BD", "#AE2DCE", "#CAFC00", "#DDD2C2",
+                  "#AED16D", "#FFEB52", "#FF8336", "#ED3276", "#00A8C1",
+                  "#10851A", "#E8224D", "#F84130", "#7EEB4B", "#F75482",
+                  "#FF4286", "#51FFBD", "#BA31FF", "#00A8C1", "#ED3276",
+                  "#FF8336", "#FFEB52", "#AED16D", "#05CDFF", "#AC05FF",
+                  "#FF05BC", "#FFC905", "#FFFB00", "#EC00BD", "#AE2DCE",
+                  "#CAFC00", "#FFD500", "#85FF00", "#00D6FF", "#C200FF",
+                  "#FF0066", "#B300FF", "#6751F0", "#FF006F", "#8119FF"]
 
     def __init__(self):
         # Screen setup
@@ -52,7 +59,7 @@ class Victor:
         self.pen.end_fill()
 
     def clear_canvas(self):
-        #self.pen.clear()
+        # self.pen.clear()
         self.window.clear()
 
     def save_img(self):
